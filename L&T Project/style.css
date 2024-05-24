@@ -1,0 +1,342 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(154, 189, 220, 0.64);
+}
+
+header {
+    background-color: #ccc;
+    padding: 15px 0;
+    display: flex;
+}
+
+header .header-logo img {
+    height: 55px;
+}
+
+header .nav-link {
+    margin: 0 10px;
+    color: #8dc2cd;
+    transition: color 0.3s;
+}
+
+header .nav-link:hover {
+    color: #007bff;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav:hover {
+    color: #007bff;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Submenu styles */
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
+    z-index: 1000;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+/* Show submenu on hover */
+.nav-item:hover .submenu {
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: #575757;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    /* Changed from white to dark for visibility against white background */
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box {
+    color: #333;
+    border-radius: 20px;
+    padding: 8px;
+    padding-right: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 8px;
+}
+
+.search-icon {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+header .social-media a {
+    margin: 0 5px;
+}
+
+header .contact-options p {
+    margin: 0;
+}
+
+.banner {
+    position: relative;
+    height: 600px;
+    /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.banner-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    /* Faster transition effect */
+}
+
+.banner-item.active {
+    opacity: 1;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.text-block {
+    padding: 35px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.image-block img {
+    max-width: 120%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.full-width-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    border-radius: 10%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+}
+
+/* Add arrow in front of footer links */
+footer .list-unstyled li {
+    position: relative;
+}
+
+footer .list-unstyled li::before {
+    content: '\00BB';
+    /* Unicode character for right angle quotation mark */
+    position: absolute;
+    left: -15px;
+    /* Adjust the positioning of the arrow as needed */
+    color: #fff;
+    /* Color of the arrow */
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */
+}
+
+/* Rotate the arrow on hover */
+footer .list-unstyled li:hover::before {
+    transform: rotate(90deg);
+
+}
+
+footer .list-unstyled li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add underline on hover for the links */
+footer .list-unstyled li a:hover {
+    text-decoration: underline;
+
+}
+
+
+footer .form-group input {
+    margin-bottom: 10px;
+}
+
+footer .form-group button {
+    width: 100%;
+}
+
+h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: #007bff;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.map-iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
