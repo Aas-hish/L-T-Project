@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var items = document.querySelectorAll('.banner-item');
+    var items = document.querySelectorAll('.banner-list');
     var currentImageIndex = 0;
 
     function showImage(index) {

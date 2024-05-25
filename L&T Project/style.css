@@ -4,97 +4,95 @@ body {
 }
 
 header {
-    background-color: #ccc;
+    background-color: #5447c8ac;
     padding: 15px 0;
     display: flex;
 }
 
-header .header-logo img {
+header .logo1 img {
     height: 55px;
 }
 
-header .nav-link {
+header .menu_link {
     margin: 0 10px;
-    color: #8dc2cd;
     transition: color 0.3s;
 }
 
-header .nav-link:hover {
+header .menu_link:hover {
     color: #007bff;
 }
 
-.nav {
+.navv {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-.nav:hover {
-    color: #007bff;
-}
 
-.nav-item {
+
+.nav-list {
     position: relative;
+    color:white;
 }
 
-.nav-link {
-    display: flex;
-    padding: 14px 20px;
+.menu_link {
     text-decoration: none;
+    font-weight: bold;
     color: white;
 }
 
 /* Submenu styles */
-.submenu {
+.sub-menu {
     display: none;
     position: absolute;
     left: 0;
     top: 100%;
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
-    background-color: #444;
+    background-color:  #5447c8ac;
     z-index: 1000;
 }
 
-.submenu li {
+.sub-menu li {
     width: 200px;
 }
 
-.submenu li a {
+.sub-menu li a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
 }
 
-.submenu li a:hover {
-    background-color: #555;
+.sub-menu li a:hover {
+    color: orange;
+    text-decoration: underline;
 }
 
 /* Show submenu on hover */
-.nav-item:hover .submenu {
-    display: block;
+.nav-list:hover .sub-menu {
+    display: flow-root;
 }
 
-.nav-link:hover {
-    background-color: #575757;
+.menu_link:hover {
+    text-decoration: underline;
 }
 
-.social-icons {
+.media-icons {
     display: flex;
     gap: 15px;
 }
 
-.social-icon {
+.media-icon {
     color: #fff;
     /* Changed from white to dark for visibility against white background */
     font-size: 20px;
     transition: color 0.3s;
 }
 
-.social-icon:hover {
+.media-icon:hover {
     color: #007bff;
 }
 
@@ -104,7 +102,7 @@ header .nav-link:hover {
     justify-content: center;
 }
 
-.search-box {
+.search-area {
     color: #333;
     border-radius: 20px;
     padding: 8px;
@@ -117,7 +115,7 @@ header .nav-link:hover {
 
 .search-icon {
     cursor: pointer;
-    color: #007bff;
+    color: orange;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -128,6 +126,7 @@ header .nav-link:hover {
     width: 100%;
     max-width: 400px;
     padding: 20px;
+    margin-bottom: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #ffffff;
@@ -182,18 +181,18 @@ header .social-media a {
     margin: 0 5px;
 }
 
-header .contact-options p {
+header .contact p {
     margin: 0;
 }
 
-.banner {
+.banner-wide {
     position: relative;
     height: 600px;
     /* Adjust height as needed */
     overflow: hidden;
 }
 
-.banner-item {
+.banner-list{
     position: absolute;
     top: 0;
     left: 0;
@@ -204,11 +203,11 @@ header .contact-options p {
     /* Faster transition effect */
 }
 
-.banner-item.active {
+.banner-list.active {
     opacity: 1;
 }
 
-.banner-item img {
+.banner-list img {
     width: 100%;
     height: auto;
 }
@@ -222,14 +221,14 @@ header .contact-options p {
     font-weight: bold;
 }
 
-.row {
+.mb-5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5rem;
 }
 
-.text-block {
+.text-box {
     padding: 35px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -244,13 +243,14 @@ header .contact-options p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.full-width-banner {
+.full-banner {
     background-size: cover;
     background-position: center;
     padding: 50px 0;
     border-radius: 10%;
     color: rgb(0, 0, 0);
     text-align: center;
+    font-weight: bold;
     margin-top: 20px;
 }
 
@@ -265,14 +265,11 @@ footer .list-unstyled li {
 
 footer .list-unstyled li::before {
     content: '\00BB';
-    /* Unicode character for right angle quotation mark */
     position: absolute;
     left: -15px;
-    /* Adjust the positioning of the arrow as needed */
     color: #fff;
-    /* Color of the arrow */
     transition: transform 0.3s ease;
-    /* Add transition for smooth animation */
+    
 }
 
 /* Rotate the arrow on hover */
@@ -292,7 +289,6 @@ footer .list-unstyled li a:hover {
 
 }
 
-
 footer .form-group input {
     margin-bottom: 10px;
 }
@@ -310,7 +306,9 @@ h4 {
 }
 
 footer {
-    background-color: #007bff;
+    background-color: #5447c8ac;
+    padding: 50px;
+    
 }
 
 .map-iframe {
